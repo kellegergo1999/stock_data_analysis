@@ -12,10 +12,11 @@ def print_data():
     api_response = api_result.json()
     print(api_result)
     for stock_data in api_response['data']:
-        print(f'Ticker %s has a day high of  %s on %s' % (
+        print(f'Ticker %s has a day high of  %s on %s and had a low of %s' % (
             stock_data['symbol'],
             stock_data['high'],
-            stock_data['date']
+            stock_data['date'],
+            stock_data['low']
         ))
 
 if __name__ == '__main__':
